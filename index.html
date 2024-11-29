@@ -18,12 +18,22 @@
           </div>
         </div>
         <ul class="navbar-nav">
-          <li class="active"><a href="index.html">ABOUT</a></li>
+          <li><a class="active" href="index.html">ABOUT</a></li>
           <li><a href="./projects/project0001.html">PROJECTS</a></li>
           <li><a href="#writings">WRITINGS</a></li>
-          <li><a href="#cv">CV</a></li>
+          <li><a id="cv-link" href="#">CV</a></li> <!-- Add an ID to the CV link -->
         </ul>
       </nav>
+
+      <div id="pdf-modal" class="modal">
+        <div class="modal-content">
+          <div class="pdf-viewer-container">
+            <embed src="./Resources/Assets/BOLDT_MICHAEL_CV_FA_2024.pdf" type="application/pdf" class="pdf-viewer">
+          </div>
+          <button class="close-button" onclick="closeModal()">[X]</button>
+        </div>
+      </div>
+      
 
       <div class="page-container">
         <div class="page-layout">
@@ -47,14 +57,18 @@
                 <p><strong>PROJECT0001</strong></p>
                 </a>
             </div>
+
             <div class="project-card">
-                <div class="image-container"></div> 
-                <a href="./projects/project0004.html">
-                    <img src="./Resources/Assets/project0004/SP_2023_CDMX/2GB_Freeland_SP23_Boldt_Michael_LN_16.jpg" alt="Project 2 Thumbnail">
+              <a href="./projects/project0004.html">
+                <div class="image-container">
+                    <img src="./Resources/Assets/project0004/SP_2023_CDMX/2GB_Freeland_SP23_Boldt_Michael_LN_16.jpg" alt="Project 1 Thumbnail">
                 </div>
                 <h5>Freeland_SP32</h5>
                 <p><strong>PROJECT0004</strong></p>
-              </a>
+                </a>
+            </div>
+        
+
             </div>
         </div>
         
@@ -65,5 +79,30 @@
         
     </div>
     
+
+    <script> 
+      // Select the CV link and the modal
+const cvLink = document.getElementById("cv-link");
+const modal = document.getElementById("pdf-modal");
+
+// Add event listener to the CV link
+cvLink.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  modal.style.display = "flex"; // Show the modal
+});
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Optional: Close modal when clicking outside of it
+window.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+    </script>
 </body>
 </html>
