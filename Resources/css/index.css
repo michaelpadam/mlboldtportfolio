@@ -93,6 +93,7 @@ h5 {
     text-align: right;
     font-weight: 700;
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .navbar-contact p + p {
@@ -199,7 +200,7 @@ h5 {
 /* Close Button */
 .close-button {
   width: 100%;
-  background-color: red;
+  background-color: darkred;
   color: white;
   border: none;
   padding: 1rem;
@@ -276,7 +277,7 @@ h5 {
     flex: 0 0 61.8%; /* Fixed width for the right column */
     /* padding-right: 1rem;  Removed for Scroll Bar*/
     gap: 2rem;
-    width: 61.8%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -286,18 +287,37 @@ h5 {
 
 /* Project Cards */
 .project-card {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
     opacity: 1;
     transition: opacity 0.5s ease;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start
+    justify-content: flex-start;
+    /* background-color: black; */
+    margin-top: -2rem;
 }
 
 .project-card:hover {
     opacity: 0.9;
+}
+
+.project-card-heading {
+    display: inline-block;
+    width: 100%;
+    background-color: black;
+    width: 100%;
+    padding: 0 0.5rem;
+}
+.project-card-heading h3 {
+    color: white;
+    text-decoration: none;
+}
+
+.project-card-heading h5 {
+    color: white;
+    text-decoration: none;
 }
 
 .image-container {
@@ -305,7 +325,8 @@ h5 {
     height: auto;
     overflow: hidden;
     position: relative;
-    margin-bottom: 2rem;
+    /* margin-bottom: 1rem; */
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
