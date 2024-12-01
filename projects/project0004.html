@@ -129,24 +129,4 @@ const cvLink = document.getElementById("cv-link");
 const modal = document.getElementById("pdf-modal");
 
 // Add event listener to the CV link
-cvLink.addEventListener("click", function (event) {
-event.preventDefault(); // Prevent default link behavior
-modal.style.display = "flex"; // Show the modal
-});
-
-// Function to close the modal
-function closeModal() {
-modal.style.display = "none";
-}
-
-// Optional: Close modal when clicking outside of it
-window.addEventListener("click", function (event) {
-if (event.target === modal) {
-closeModal();
-}
-});
-
-</script>
-
-
-</body>
+cvLink.addEventListener("
